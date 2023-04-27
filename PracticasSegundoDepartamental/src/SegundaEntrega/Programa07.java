@@ -18,7 +18,7 @@ return radio;
         return resultado;
     }
 }
-public class Programa7{ 
+public class Programa07{ 
     public static void main(String[] args) {
     int x=0,lado1, lado2, lado3, altura, lado; //Variables miembro
     double radio;

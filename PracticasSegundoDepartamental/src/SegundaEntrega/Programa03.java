@@ -2,7 +2,7 @@ package SegundaEntrega;
 
 import java.util.Scanner;
 
-public class Programa3 {
+public class Programa03 {
 
     static public class base {//clase padre
 

@@ -14,7 +14,7 @@ class ProgramaNueve {
 return resultado;    
     }
 }
-public class Programa9{
+public class Programa09{
     public static void main(String[] args) {
     int x=0,lado; //variables miembro
     double lado1,lado2,altura;

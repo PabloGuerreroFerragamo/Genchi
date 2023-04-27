@@ -2,7 +2,7 @@ package SegundaEntrega;
 
 import java.util.Scanner;
 
-public class Programa1 {
+public class Programa01 {
     public static void main(String[] args) { //Metodo principal del codigo
         circulo obj3 = new circulo(); //instancia a la clase hija circulo
         triangulo obj2 = new triangulo();//instancia a la clase hija triangulo

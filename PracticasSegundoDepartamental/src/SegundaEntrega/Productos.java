@@ -2,34 +2,32 @@ package SegundaEntrega;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Alumno
- */
-public class Productos {
+public class Productos { //clase padre
 
-    Productos(int FechaDeCaducidad1, int NumeroDeLote1) {
-        FechaDeCaducidad = FechaDeCaducidad1;
-        NumeroDeLote = NumeroDeLote1;
+    Productos(int FechaDeCaducidad1, int NumeroDeLote1) { //constructor
+        FechaDeCaducidad = FechaDeCaducidad1;//variable miembro
+        NumeroDeLote = NumeroDeLote1;//variable miembro
     }
-    int FechaDeCaducidad;
-    int NumeroDeLote;
-    Scanner leer = new Scanner(System.in);
-    Scanner leerint = new Scanner(System.in);
+    int FechaDeCaducidad;//variable de tipo int
+    int NumeroDeLote;//variable de tipo int
+    Scanner leer = new Scanner(System.in);//Instancia de la clase Scanner llamada leer
+    Scanner leerint = new Scanner(System.in);//Instancia de la clase Scanner llamada leerint
 
 }
 
-class Frescos extends Productos {
+class Frescos extends Productos {//clase hija llamada frescos
+//constructor
 
     Frescos(int FechaDeCaducidad, int NumeroDeLote) {
         super(FechaDeCaducidad, NumeroDeLote);
     }
 
-    String envasado;
-    String paisDeOrigen;
-    void modificar() {
+    String envasado;//variable de tipo String
+    String paisDeOrigen;//variable de tipo String
+
+    void modificar() {//funcion miembro que modifica los datos
         int responder = 0;
-        System.out.println("Que deseas modificar?");
+        System.out.println("Que deseas modificar?");//menu
         System.out.println("Presiona 1 para modificar numero de lote");
         System.out.println("Presiona 2 para modificar fecha de caducidad");
         System.out.println("Presiona 3 para modificar fecha de evansado");
@@ -46,26 +44,25 @@ class Frescos extends Productos {
         }
         if (responder == 3) {
             System.out.println("Dame la Fecha de Envasado:");
-        envasado = leer.nextLine();
+            envasado = leer.nextLine();
         }
         if (responder == 4) {
             System.out.println("Dame el pais de origen:");
-        paisDeOrigen = leerint.nextLine();
+            paisDeOrigen = leerint.nextLine();
         }
         if (responder == 5) {
-                   System.out.println("Dame la Fecha de Caducidad:");
-        FechaDeCaducidad = leerint.nextInt();
-        System.out.println("Dame el Numero de Lote:");
-        NumeroDeLote = leerint.nextInt();
-        System.out.println("Dame la Fecha de Envasado:");
-        envasado = leerint.nextLine();
-        System.out.println("Dame el pais de origen:");
-        paisDeOrigen = leerint.nextLine();
+            System.out.println("Dame la Fecha de Caducidad:");
+            FechaDeCaducidad = leerint.nextInt();
+            System.out.println("Dame el Numero de Lote:");
+            NumeroDeLote = leerint.nextInt();
+            System.out.println("Dame la Fecha de Envasado:");
+            envasado = leerint.nextLine();
+            System.out.println("Dame el pais de origen:");
+            paisDeOrigen = leerint.nextLine();
         }
     }
 
-    
-    void get() {
+    void get() {//funcion miembro que pide los datos
         System.out.println("Dame la Fecha de Caducidad:");
         FechaDeCaducidad = leerint.nextInt();
         System.out.println("Dame el Numero de Lote:");
@@ -76,7 +73,7 @@ class Frescos extends Productos {
         paisDeOrigen = leerint.nextLine();
     }
 
-    void set() {
+    void set() {//funcion miembro que muestra los datos
         System.out.println("La fecha de caducidad es: " + FechaDeCaducidad + " , el numero de lote es: " + NumeroDeLote + ", Con fecha de envasado de: " + envasado + " , y su pais de origen es: " + paisDeOrigen);
     }
 
@@ -101,14 +98,14 @@ class Frescos extends Productos {
 
 }
 
-class Refrigerados extends Productos {
+class Refrigerados extends Productos { //clase hija llamada refrigerados 
 
-    Refrigerados(int FechaDeCaducidad, int NumeroDeLote) {
+    Refrigerados(int FechaDeCaducidad, int NumeroDeLote) {//constructor
         super(FechaDeCaducidad, NumeroDeLote);
     }
-    int codigoDelOrganismoDeSupervisionAlimentaria;
+    int codigoDelOrganismoDeSupervisionAlimentaria;//variable de tipo int
 
-        void modificar() {
+    void modificar() {//funcion miembro que modifica los datos
         int responder = 0;
         System.out.println("Que deseas modificar?");
         System.out.println("Presiona 1 para modificar numero de lote");
@@ -126,20 +123,19 @@ class Refrigerados extends Productos {
         }
         if (responder == 3) {
             System.out.println("Dame el codigo:");
-        codigoDelOrganismoDeSupervisionAlimentaria = leerint.nextInt();
+            codigoDelOrganismoDeSupervisionAlimentaria = leerint.nextInt();
         }
         if (responder == 4) {
-           System.out.println("Dame la Fecha de Caducidad:");
-        FechaDeCaducidad = leerint.nextInt();
-        System.out.println("Dame el Numero de Lote:");
-        NumeroDeLote = leerint.nextInt();
-        System.out.println("Dame el codigo:");
-        codigoDelOrganismoDeSupervisionAlimentaria = leerint.nextInt();
+            System.out.println("Dame la Fecha de Caducidad:");
+            FechaDeCaducidad = leerint.nextInt();
+            System.out.println("Dame el Numero de Lote:");
+            NumeroDeLote = leerint.nextInt();
+            System.out.println("Dame el codigo:");
+            codigoDelOrganismoDeSupervisionAlimentaria = leerint.nextInt();
         }
     }
 
-    
-    void get() {
+    void get() {//funcion miembro que pide los datos
         System.out.println("Dame la Fecha de Caducidad:");
         FechaDeCaducidad = leerint.nextInt();
         System.out.println("Dame el Numero de Lote:");
@@ -149,7 +145,7 @@ class Refrigerados extends Productos {
 
     }
 
-    void set() {
+    void set() {//funcion miembro que muestra los datos
         System.out.println("La fecha de caducidad es: " + FechaDeCaducidad + " , el numero de lote es: " + NumeroDeLote + ", y con codigo: " + codigoDelOrganismoDeSupervisionAlimentaria);
     }
 
@@ -165,12 +161,12 @@ class Refrigerados extends Productos {
 
 }
 
-class Congelados extends Productos {
+class Congelados extends Productos { //clase hija llamada congelados
 
-    Congelados(int FechaDeCaducidad, int NumeroDeLote) {
+    Congelados(int FechaDeCaducidad, int NumeroDeLote) {//constructor
         super(FechaDeCaducidad, NumeroDeLote);
     }
-    int temeperaturaRecomendada;
+    int temeperaturaRecomendada; //variable de tipo int
 
     void modificar() {
         int responder = 0;
@@ -189,21 +185,20 @@ class Congelados extends Productos {
             FechaDeCaducidad = leerint.nextInt();
         }
         if (responder == 3) {
-               System.out.println("Dame temperatura:");
-        temeperaturaRecomendada = leerint.nextInt();
+            System.out.println("Dame temperatura:");
+            temeperaturaRecomendada = leerint.nextInt();
         }
         if (responder == 4) {
-           System.out.println("Dame la Fecha de Caducidad:");
-        FechaDeCaducidad = leerint.nextInt();
-        System.out.println("Dame el Numero de Lote:");
-        NumeroDeLote = leerint.nextInt();
-        System.out.println("Dame temperatura:");
-        temeperaturaRecomendada = leerint.nextInt();
+            System.out.println("Dame la Fecha de Caducidad:");
+            FechaDeCaducidad = leerint.nextInt();
+            System.out.println("Dame el Numero de Lote:");
+            NumeroDeLote = leerint.nextInt();
+            System.out.println("Dame temperatura:");
+            temeperaturaRecomendada = leerint.nextInt();
         }
     }
 
-    
-    void get() {
+    void get() {//funcion miembro que pide los datos
         System.out.println("Dame la Fecha de Caducidad:");
         FechaDeCaducidad = leerint.nextInt();
         System.out.println("Dame el Numero de Lote:");
@@ -213,7 +208,7 @@ class Congelados extends Productos {
 
     }
 
-    void set() {
+    void set() {//funcion miembro que muestra los datos
         System.out.println("La fecha de caducidad es: " + FechaDeCaducidad + " , el numero de lote es: " + NumeroDeLote + ", y con temperatura: " + temeperaturaRecomendada);
     }
 
@@ -230,15 +225,15 @@ class Congelados extends Productos {
 
 class testHerencia2 {
 
-    public static void main(String[] args) {
-        int contador = 0, productos = 0, productosgeneral = 0, productos3 = 0, productos4=0;
+    public static void main(String[] args) {//metodo principal
+        int contador = 0, productos = 0, productosgeneral = 0, productos3 = 0, productos4 = 0;
         int andyYaNoMeRasguñes = 0;
         int respuesta = 0;
         int responder = 0;
-        Frescos frescos1 = new Frescos(0, 0);
-        Refrigerados refrigerados1 = new Refrigerados(0, 0);
-        Congelados congelados1 = new Congelados(0, 0);
-        
+        Frescos frescos1 = new Frescos(0, 0);//se instancia un objeto llamado frescos1 de tipo frescos
+        Refrigerados refrigerados1 = new Refrigerados(0, 0);//se instancia un objeto llamado refrigerados1 de tipo refrigerados
+        Congelados congelados1 = new Congelados(0, 0);//se instancia un objeto llamado congelados1 de tipo congelados
+
         while (productosgeneral < 1) {
             System.out.println("---Menu---");
             System.out.println("Presiona 1 para agregar");
@@ -269,7 +264,7 @@ class testHerencia2 {
                         productos++;
                     }
                 }
-               productos--;
+                productos--;
 
             }
             if (respuesta == 2) {
@@ -281,26 +276,25 @@ class testHerencia2 {
                     responder = frescos1.leerint.nextInt();
                     if (responder == 1) {
                         frescos1.set();
-                         productos3++;
+                        productos3++;
                     }
                     if (responder == 2) {
                         refrigerados1.set();
-                         productos3++;
+                        productos3++;
                     }
                     if (responder == 3) {
                         congelados1.set();
-                         productos3++;
+                        productos3++;
                     }
                     if (responder == 4) {
                         productos3++;
                     }
                 }
-             productos3--;
-                
+                productos3--;
 
             }
-             
-  if (respuesta == 3) {
+
+            if (respuesta == 3) {
                 while (productos4 < 1) {
                     System.out.println("Presiona 1 para modificar Producto Fresco");
                     System.out.println("Presiona 2 para modificar Producto Refrigerado");
@@ -313,20 +307,20 @@ class testHerencia2 {
                     }
                     if (responder == 2) {
                         refrigerados1.modificar();
-                         productos4++;
+                        productos4++;
                     }
                     if (responder == 3) {
                         congelados1.modificar();
-                         productos4++;
+                        productos4++;
                     }
                     if (responder == 4) {
                         productos4++;
                     }
                 }
-productos4--;
+                productos4--;
 
             }
-             
+
         }
     }
 }

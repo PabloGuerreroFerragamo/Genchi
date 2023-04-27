@@ -2,7 +2,7 @@ package SegundaEntrega;
 
 import java.util.Scanner;
 
-public class Programa5 {
+public class Programa05 {
     public static void main(String[] args) {//Metodo principal
         
         SUM obj1 = new SUM();//Instancia a la clase SUM con objeto llamado "obj1"

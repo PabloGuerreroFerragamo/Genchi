@@ -3,7 +3,7 @@ package SegundaEntrega;
 
 import java.util.Scanner;
 
-public class Programa8 {
+public class Programa08 {
     static void volumen(float b, float h) { //Metodo llamado "volumen" que acepta dos variables, ambas de tipo float
         System.out.println((b*b*h/3)*3.1416);//Impresion del resultado de la operacion para calcular el volumen del cono
     }

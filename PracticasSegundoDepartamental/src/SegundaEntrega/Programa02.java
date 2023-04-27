@@ -3,7 +3,7 @@ package SegundaEntrega;
 
 import java.util.Scanner;
 
-public class Programa2 {
+public class Programa02 {
     public static void main(String[] args) {
         circulo llamada=new circulo(); //Constructor circulo
         llamada.Capturar();
