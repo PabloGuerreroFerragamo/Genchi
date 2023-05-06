@@ -1,5 +1,5 @@
-package SegundaEntrega;
 
+package Clases;
 import java.util.Scanner;
 
 public class Publicacion {//Se crea la clase padre llamada Publicación
